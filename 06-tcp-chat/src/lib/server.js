@@ -17,7 +17,16 @@ server.on('connection', (socket) => {
   clientPool.push(client);
 
   // tells connecting client welcome, and tells everyone connected to server that client has joined
-  client.socket.write(`\tWelcome to the chat! Your nickname is ${client.nickname}.\n`);
+  client.socket.write(`
+    =============== Welcome to the Chat! ===============
+            Your nickname is ${client.nickname}.
+                   [ Available Commands ]
+      @list - lists connected users
+      @quit - quits the chat
+      @nickname <name> - changes your nickname
+      @dm <name> <message> - direct messages another user
+    \n\n`);
+
   clientPool.map(c => c.socket.write(`\t${client.nickname} has joined the chat.\n`));
 
   // whenever the connecting client transmits data (writes something and presses enter), handle it
