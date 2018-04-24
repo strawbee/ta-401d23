@@ -6,8 +6,6 @@ build
 
 03-async-callbacks/src/__test__
 04-bitmap/src/__test__
-04-bitmap
-
 
 # Created by https://www.gitignore.io/api/vim,osx,node,linux,windows
 ### Linux ###
