@@ -16,6 +16,7 @@
                 "allowForLoopAfterthoughts": true
             }
         ],
-        "no-bitwise": "off"
+        "no-bitwise": "off",
+        "no-underscore-dangle": "off"
     }
 }
