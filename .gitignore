@@ -7,9 +7,6 @@ build
 03-async-callbacks/src/__test__
 04-bitmap/src/__test__
 
-08-rest-http
-00-daily-whiteboard/08-sll-merge.js
-
 # Created by https://www.gitignore.io/api/vim,osx,node,linux,windows
 ### Linux ###
 *~

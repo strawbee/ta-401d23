@@ -16,7 +16,7 @@ commands.parse = (message, client, clientPool) => {
       break;
     }
 
-    case '@quit':
+    case '@quit': 
       client.socket.write(`\tSee you later, ${client.nickname}!\n`);
       client.socket.end();
       break;
