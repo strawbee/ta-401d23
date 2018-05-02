@@ -6,6 +6,8 @@ build
 
 03-async-callbacks/src/__test__
 04-bitmap/src/__test__
+00-daily-whiteboard/13-multibracket-validation.js
+09-persistence
 
 # Created by https://www.gitignore.io/api/vim,osx,node,linux,windows
 ### Linux ###

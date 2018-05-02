@@ -67,7 +67,7 @@ module.exports = class SLL { // eslint-disable-line
     }
     return newSLL;
   }
-
+  
   reduce(callback, initialValue) {
     if (!this.head) return new Error('Cannot reduce - no nodes in SLL.');
     let result = initialValue;
@@ -83,3 +83,4 @@ module.exports = class SLL { // eslint-disable-line
     return result;
   }
 };
+

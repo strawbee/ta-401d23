@@ -3,12 +3,12 @@
 const commands = module.exports = {};
 
 commands.parse = (message, client, clientPool) => {
-  const messageArray = message.split(' ');
-  const command = messageArray[0];
-  const name = messageArray[1];
-  const msg = messageArray.slice(2).join(' ');
+  const messageArray = message.split(' '); 
+  const command = messageArray[0]; 
+  const name = messageArray[1]; 
+  const msg = messageArray.slice(2).join(' '); 
 
-  switch (command) {
+  switch (command) { 
     case '@nickname': {
       const temp = client.nickname;
       client.nickname = name;
@@ -25,9 +25,11 @@ commands.parse = (message, client, clientPool) => {
       client.socket.write(`\tUsers connected: ${clientPool.map(c => c.nickname).join(', ')}\n`);
       break;
 
-    case '@dm':
-      clientPool.filter(c => c.nickname === name)[0].socket.write(`[DM] ${client.nickname}: ${msg}\n`);
+    case '@dm': {
+      const personToDM = clientPool.filter(c => c.nickname === name)[0];
+      personToDM.socket.write(`[DM] ${client.nickname}: ${msg}`);
       break;
+    }
 
     default:
       client.socket.write('\tYou have entered an invalid command.\n');

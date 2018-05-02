@@ -26,7 +26,7 @@ storage.create = function create(schema, item) {
     logger.log(logger.INFO, 'Created a new thing.');
     return resolve(memory[schema][item.id]);
   });
-};
+}; 
 
 storage.fetchOne = function fetchOne(schema, id) {
   return new Promise((resolve, reject) => {
