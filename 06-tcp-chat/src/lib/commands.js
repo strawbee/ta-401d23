@@ -27,7 +27,7 @@ commands.parse = (message, client, clientPool) => {
 
     case '@dm': {
       const personToDM = clientPool.filter(c => c.nickname === name)[0];
-      personToDM.socket.write(`[DM] ${client.nickname}: ${msg}`);
+      personToDM.socket.write(`[DM] ${client.nickname}: ${msg}\n`);
       break;
     }
 
